@@ -35,129 +35,166 @@ body {
     align-items: center;
   }
   
-  .card {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border: none;
-    border-radius: 10px;
-  }
-  
-  .progress {
-    height: 8px;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
-  }
-  
-  .progress-bar {
-    border-radius: 4px;
-  }
-  
-  .bg-success {
-    background-color: #4CAF50 !important;
-  }
-  
-  .bg-info {
-    background-color: #00BCD4 !important;
-  }
-  
-  .bg-warning {
-    background-color: #FFC107 !important;
-  }
-  
-  .ai-robot-image {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-  
   .instructor-section {
-    background-color: #ffffff;
-    padding: 3rem 0;
-    margin: 1rem 0;
-    text-align: center;
+    background: #f8f9fa;
+    padding: 60px 0 40px 0;
   }
   
-  .instructor-image {
-    width: 280px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 140px/100px;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: #4a6bff;
+    border-radius: 3px;
+    margin: 18px auto 0 auto;
   }
   
   .instructor-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 3rem;
-    padding: 0 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .instructor-image-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .instructor-image {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.10);
+    border: 8px solid #fff;
+    background: #fff;
+  }
+  
+  .instructor-social {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 18px;
+  }
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #4a6bff;
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 8px rgba(74,107,255,0.10);
+    transition: background 0.2s, transform 0.2s;
+    border: 2px solid #fff;
+  }
+  .social-icon:hover {
+    background: #2c3e50;
+    color: #fff;
+    transform: translateY(-3px) scale(1.08);
   }
   
   .instructor-details {
     flex: 1;
+    padding-left: 0;
   }
-  
   .instructor-details h3 {
+    font-size: 2rem;
+    font-weight: 700;
     color: #2c3e50;
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-    font-weight: 500;
+    margin-bottom: 0.2rem;
   }
-  
+  .instructor-title {
+    color: #7b8ca6;
+    font-size: 1.15rem;
+    margin-bottom: 1.1rem;
+  }
   .instructor-details p {
-    color: #5f6c7b;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 0;
+    color: #2c3e50;
+    font-size: 1.08rem;
+    margin-bottom: 2.2rem;
     font-weight: 400;
-    opacity: 0.9;
+    opacity: 0.95;
   }
   
-  .section-title {
-    color: #2c3e50;
-    font-size: 1.75rem;
-    margin-bottom: 2.5rem;
-    font-weight: 400;
+  .instructor-stats {
+    display: flex;
+    gap: 3.5rem;
+    margin-top: 0.5rem;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #4a6bff;
+    margin-bottom: 0.2rem;
+  }
+  .stat-label {
+    color: #7b8ca6;
+    font-size: 1.05rem;
+    font-weight: 500;
   }
   
   @media (max-width: 992px) {
     .instructor-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
+      flex-direction: column;
+      gap: 2.5rem;
+      text-align: center;
     }
-    
     .instructor-details {
-        text-align: center;
+      padding-left: 0;
     }
-
     .instructor-image {
-        width: 240px;
-        height: 160px;
+      width: 220px;
+      height: 220px;
     }
-
-    .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
+    .instructor-social {
+      bottom: 8px;
+      gap: 12px;
+    }
+    .instructor-stats {
+      gap: 2rem;
+      justify-content: center;
     }
   }
-  
-  @media (max-width: 576px) {
+  @media (max-width: 600px) {
     .instructor-image {
-        width: 220px;
-        height: 140px;
+      width: 140px;
+      height: 140px;
     }
-    
-    .instructor-details h3 {
-        font-size: 1.25rem;
+    .instructor-social {
+      bottom: 0;
+      gap: 8px;
     }
-    
-    .instructor-details p {
-        font-size: 0.95rem;
+    .section-title {
+      font-size: 1.3rem;
+    }
+    .stat-number {
+      font-size: 1.2rem;
+    }
+    .stat-label {
+      font-size: 0.9rem;
     }
   }
   
@@ -167,13 +204,87 @@ body {
     font-weight: 600;
   }
   
-  .form-control {
-    padding: 12px;
+  /* --- Curriculum Section Refined --- */
+  .curriculum-section {
+    background-color: #fff;
+    padding: 60px 0 50px 0;
+  }
+  
+  .progress-container {
+    background: #f8f9fa;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.06);
+  }
+  .progress-item {
+    margin-bottom: 2rem;
+  }
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .progress-header h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .progress-percentage {
+    color: #4a6bff;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin-bottom: 0;
+  }
+  .progress-bar {
     border-radius: 5px;
   }
   
-  .form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    border-color: #80bdff;
+  .curriculum-image {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .ai-robot-image {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: none;
+    transition: none;
+  }
+  
+  @media (max-width: 992px) {
+    .curriculum-section {
+      padding: 35px 0 20px 0;
+    }
+    .ai-robot-image {
+      max-width: 180px;
+      border-radius: 6px;
+    }
+    .progress-container {
+      padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .ai-robot-image {
+      max-width: 110px;
+      border-radius: 4px;
+    }
+    .progress-header h4 {
+      font-size: 0.95rem;
+    }
+    .progress-percentage {
+      font-size: 0.95rem;
+    }
   }
   
