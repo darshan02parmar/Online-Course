@@ -18,8 +18,9 @@ This project is designed to showcase a professional course overview, introduce t
 
 ## 📷 Screenshots
 
+![image](https://github.com/user-attachments/assets/afbd163b-0e0a-4a6c-bece-2c9a0dfb5e22)
 ![image](https://github.com/user-attachments/assets/bc25ddae-9ca4-4333-b809-946624eb62e6)
 ![image](https://github.com/user-attachments/assets/215a9d98-41b0-4eda-bcb3-344387662cfb)
-![image](https://github.com/user-attachments/assets/afbd163b-0e0a-4a6c-bece-2c9a0dfb5e22)
+
 
 
